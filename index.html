@@ -13,32 +13,49 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: #2f3136;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
     img {
       border-radius: 50%;
       margin-bottom: 20px;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
     }
-    .card {
-      background-color: #2f3136;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
+    h1 {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+    p {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #b9bbbe;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img id="avatar" src="" alt="Avatar Discord" width="100">
+    <img id="avatar" src="" alt="Avatar Discord">
     <h1 id="username">Pseudo Discord</h1>
     <p>ID Discord : 1010512967269367889</p>
   </div>
 
   <script>
     const userId = "1010512967269367889";
-    const avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/PLACEHOLDER.png`; // À remplacer par ton hash d'avatar
-    document.getElementById('avatar').src = avatarUrl;
-    document.getElementById('username').innerText = "TonPseudo"; // Remplace par ton pseudo
+    const username = "TonPseudo"; // Remplace par ton pseudo Discord
+    const avatarHash = "PLACEHOLDER"; // Remplace par le hash de ton avatar
+
+    const avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/${avatarHash}.png?size=128`;
+    document.getElementById("avatar").src = avatarUrl;
+    document.getElementById("username").innerText = username;
   </script>
 </body>
 </html>
