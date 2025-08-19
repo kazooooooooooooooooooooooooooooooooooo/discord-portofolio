@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Discord</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #36393f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    img {
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .card {
+      background-color: #2f3136;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img id="avatar" src="" alt="Avatar Discord" width="100">
+    <h1 id="username">Pseudo Discord</h1>
+    <p>ID Discord : 1010512967269367889</p>
+  </div>
+
+  <script>
+    const userId = "1010512967269367889";
+    const avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/PLACEHOLDER.png`; // À remplacer par ton hash d'avatar
+    document.getElementById('avatar').src = avatarUrl;
+    document.getElementById('username').innerText = "TonPseudo"; // Remplace par ton pseudo
+  </script>
+</body>
+</html>
