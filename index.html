@@ -44,18 +44,16 @@
 <body>
   <div class="card">
     <img id="avatar" src="" alt="Avatar Discord">
-    <h1 id="username">Pseudo Discord</h1>
+    <h1>Pseudo Discord</h1>
     <p>ID Discord : 1010512967269367889</p>
   </div>
 
   <script>
     const userId = "1010512967269367889";
-    const username = "TonPseudo"; // Remplace par ton pseudo Discord
-    const avatarHash = "PLACEHOLDER"; // Remplace par le hash de ton avatar
-
-    const avatarUrl = `https://cdn.discordapp.com/avatars/${userId}/${avatarHash}.png?size=128`;
+    // Avatar par défaut basé sur l'ID
+    const defaultAvatar = parseInt(userId) % 5; // Discord a 5 avatars par défaut
+    const avatarUrl = `https://cdn.discordapp.com/embed/avatars/${defaultAvatar}.png`;
     document.getElementById("avatar").src = avatarUrl;
-    document.getElementById("username").innerText = username;
   </script>
 </body>
 </html>
